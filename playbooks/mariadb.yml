@@ -29,8 +29,7 @@
         gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
     - name: Install MariaDB server
       yum:
-        name:
-          - MariaDB-server
+        name: MariaDB-server
         state: latest
     - name: start MariaDB service
       systemd:
