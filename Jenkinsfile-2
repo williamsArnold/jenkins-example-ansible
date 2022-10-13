@@ -1,7 +1,5 @@
-pipeline {
-  agent any
-  stages {
-    stage('Hello') {
+node {
+    stage('ansible') {
       steps {
         sh 'ansible-galaxy collection install -r requirements.yml'
         sh 'ansible-inventory -i ./inventory/mariadb.yml --list'
@@ -9,4 +7,4 @@ pipeline {
       }
     }
   }
-}
+
