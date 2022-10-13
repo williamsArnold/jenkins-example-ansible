@@ -1,7 +1,7 @@
 ---
-all
- hosts
-  mariadbs
+all:
+ hosts:
+  mariadbs:
    ansible_host: 192.168.184.130
    ansible_user: root
    
