@@ -20,7 +20,7 @@
         state: enabled
         immediate: yes
     - name: MariaDB yum repository
-      yum_repository:
+      apt_repository:
         name: MariaDB
         description: MariaDB
         baseurl: http://yum.mariadb.org/10.6.2/centos$releasever-amd64
@@ -28,7 +28,7 @@
         gpgcheck: yes
         gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
     - name: Install MariaDB server
-      yum:
+      apt:
         name: mariadb-server
         state: latest
     - name: start MariaDB service
